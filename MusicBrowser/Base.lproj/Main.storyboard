@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hop-Gl-gmJ">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,22 +15,22 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MusicBrowser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ttw-Lv-uPM">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="70" width="1024" height="1296"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="trackCell" rowHeight="93" id="Mtw-eu-1rB" customClass="TrackCell" customModule="MusicBrowser" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="93"/>
+                                        <rect key="frame" x="0.0" y="28" width="1024" height="93"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mtw-eu-1rB" id="FKE-sP-ObF">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="92.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mtw-eu-1rB" id="FKE-sP-ObF">
+                                            <rect key="frame" x="0.0" y="0.0" width="991" height="92.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-image" translatesAutoresizingMaskIntoConstraints="NO" id="hHN-oc-wxu">
-                                                    <rect key="frame" x="15" y="16" width="60" height="60"/>
+                                                    <rect key="frame" x="15" y="20" width="60" height="60"/>
                                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="ifV-zX-pzF"/>
@@ -38,7 +38,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsZ-LO-ccG">
-                                                    <rect key="frame" x="83" y="19" width="251" height="30"/>
+                                                    <rect key="frame" x="83" y="23" width="901" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="POD-6H-o7w"/>
                                                     </constraints>
@@ -47,7 +47,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCe-Qr-Whq">
-                                                    <rect key="frame" x="83" y="52" width="124.5" height="21"/>
+                                                    <rect key="frame" x="83" y="56" width="449" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="26C-EM-Fkd"/>
                                                     </constraints>
@@ -56,7 +56,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBE-sB-ta2">
-                                                    <rect key="frame" x="209.5" y="52" width="124.5" height="21"/>
+                                                    <rect key="frame" x="534" y="56" width="449" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="rQX-gm-P2a"/>
                                                     </constraints>
@@ -72,7 +72,7 @@
                                                 <constraint firstItem="hHN-oc-wxu" firstAttribute="leading" secondItem="FKE-sP-ObF" secondAttribute="leadingMargin" id="8ii-i1-LZ9"/>
                                                 <constraint firstItem="iCe-Qr-Whq" firstAttribute="top" secondItem="VsZ-LO-ccG" secondAttribute="bottom" constant="3" id="Cs1-bb-NMo"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="hHN-oc-wxu" secondAttribute="bottom" constant="6" id="FUr-W4-tKh"/>
-                                                <constraint firstItem="VsZ-LO-ccG" firstAttribute="trailing" secondItem="FKE-sP-ObF" secondAttribute="trailingMargin" id="K54-0B-VXB"/>
+                                                <constraint firstItem="VsZ-LO-ccG" firstAttribute="trailing" secondItem="FKE-sP-ObF" secondAttribute="trailingMargin" constant="1" id="K54-0B-VXB"/>
                                                 <constraint firstItem="WBE-sB-ta2" firstAttribute="top" secondItem="VsZ-LO-ccG" secondAttribute="bottom" constant="3" id="ZYV-7A-Y8m"/>
                                                 <constraint firstItem="VsZ-LO-ccG" firstAttribute="leading" secondItem="hHN-oc-wxu" secondAttribute="trailing" constant="8" id="epR-Jb-JIX"/>
                                                 <constraint firstItem="iCe-Qr-Whq" firstAttribute="leading" secondItem="hHN-oc-wxu" secondAttribute="trailing" constant="8" id="fs4-oE-xOK"/>
@@ -114,11 +114,11 @@
             <objects>
                 <viewController id="E6i-2o-qQF" customClass="TrackDetailViewController" customModule="MusicBrowser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sqb-bj-YDr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwC-QM-PMj">
-                                <rect key="frame" x="16" y="91" width="343" height="22"/>
+                                <rect key="frame" x="16" y="97" width="992" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="ArG-EV-aU9"/>
                                 </constraints>
@@ -127,7 +127,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Srv-2Z-XN0">
-                                <rect key="frame" x="124" y="128" width="235" height="21"/>
+                                <rect key="frame" x="124" y="134" width="884" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="xgP-g9-JuF"/>
                                 </constraints>
@@ -136,7 +136,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvw-mX-qpN">
-                                <rect key="frame" x="124" y="151" width="235" height="21"/>
+                                <rect key="frame" x="124" y="157" width="884" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="1Hv-sh-jq5"/>
                                 </constraints>
@@ -145,7 +145,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDU-8x-Qi6">
-                                <rect key="frame" x="124" y="207" width="235" height="21"/>
+                                <rect key="frame" x="124" y="213" width="884" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="pXw-Re-Suu"/>
                                 </constraints>
@@ -154,7 +154,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-image" translatesAutoresizingMaskIntoConstraints="NO" id="vXP-hU-POQ">
-                                <rect key="frame" x="16" y="128" width="100" height="100"/>
+                                <rect key="frame" x="16" y="134" width="100" height="100"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="0cl-JQ-0bg"/>
@@ -162,7 +162,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKA-NH-UQX">
-                                <rect key="frame" x="16" y="236" width="343" height="20.5"/>
+                                <rect key="frame" x="16" y="242" width="992" height="1104"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="400" id="Ypb-1k-2Ta"/>
                                 </constraints>
@@ -212,7 +212,7 @@
             <objects>
                 <navigationController id="hop-Gl-gmJ" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="O9j-LW-T21">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="1024" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
