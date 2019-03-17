@@ -28,23 +28,47 @@ public class TrackDetailViewController:UIViewController {
     
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         self.loadData()
+        
+        // Set this screen as default
+        UserDefaults.standard.set("DETAIL_SCREEN", forKey: "lastScreen")
     }
     
-    public func loadData() {
+    // called when back is pressed
+    override public func didMove(toParent parent: UIViewController?) {
+        if (self.parent != parent) {
+            // Mark nil the track details if view is moving back to parent
+            UserDefaults.standard.set(nil, forKey: "trackDetails")
+        }
+    }
+    
+    
+    private func populateUI(withTrackItem trackItem:TrackItem) {
+        
+        // Set UI
+        self.titleLabel.text = trackItem.trackName ?? ""
+        self.artistNameLabel.text = trackItem.artistName ?? ""
+        self.genre.text = trackItem.genre ?? "Unknown"
+        self.priceLabel.text = "\((trackItem.currency)!) \((trackItem.trackPrice)!)"
+        self.descriptionLabel.text = trackItem.description
         do {
+            self.trackImageView.image = UIImage(data: try Data(contentsOf: trackItem.artworkUrl100!))
+        }
+        catch let e as NSError {
+            print(e.localizedFailureReason)
+        }
+    }
+    
+    
+    public func loadData() {
+        
         let model = TrackListModel.sharedInstance
         if nil != model.selectedTrackIndex {
             let trackItem = model.trackItem(forIndex: model.selectedTrackIndex!)
-            
             if (nil != trackItem) {
-                // Set UI
-                self.titleLabel.text = trackItem!.trackName ?? ""
-                self.trackImageView.image = UIImage(data: try Data(contentsOf: trackItem!.artworkUrl100!))
-                self.artistNameLabel.text = trackItem!.artistName ?? ""
-                self.genre.text = trackItem!.genre ?? "Unknown"
-                self.priceLabel.text = "\((trackItem!.currency)!) \((trackItem!.trackPrice)!)"
-                self.descriptionLabel.text = trackItem!.description
+                populateUI(withTrackItem: trackItem!)
+                UserDefaults.standard.set(trackItem?.innerDictionary, forKey: "trackDetails")
             }
             else {
                 self.dismiss(animated: true) {
@@ -53,13 +77,17 @@ public class TrackDetailViewController:UIViewController {
             }
         }
         else {
-            self.dismiss(animated: true) {
-                
+            let lastTrackItemDetails = UserDefaults.standard.object(forKey: "trackDetails") as? [String:Any?] ?? nil
+            if (nil != lastTrackItemDetails) {
+                let lastTrackItem = TrackItem(details: lastTrackItemDetails)
+                populateUI(withTrackItem: lastTrackItem)
+            }
+            else {
+                self.dismiss(animated: true) {
+                    
+                }
             }
         }
-        }
-        catch let e as NSError {
-            print(e.localizedFailureReason!)
-        }
+        
     }
 }
