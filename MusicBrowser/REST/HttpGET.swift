@@ -21,6 +21,13 @@ open class HttpGET : HttpRESTRequest {
     }
     
     
+    
+    /**
+     Executes the GET request
+     
+     - Parameters:
+     - (Dictionary<String,Any?>?, HTTPURLResponse?, Error?)->Void completion block.
+     */
     public func execute(onJsonRequestResult:@escaping (Dictionary<String,Any?>?, HTTPURLResponse?, Error?)->Void) {
         self.onCompleteBlockJson = onJsonRequestResult
         super.execute { (data, response, error) in
