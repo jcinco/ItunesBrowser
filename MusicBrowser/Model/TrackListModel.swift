@@ -9,12 +9,17 @@
 import Foundation
 import UIKit
 
+public protocol TrackListModelDelegate {
+    func onData()
+}
 
 
 /// TrackListModel
 /// This singleton class will hold the results obtained from the itunes API
 /// specified.
 public class TrackListModel:NSObject, UITableViewDataSource {
+    
+    public var delegate:TrackListModelDelegate?
     
     private var trackItems:[TrackItem]! = []
     private var trackResultsDict:Dictionary<String,Any?>?
@@ -30,8 +35,9 @@ public class TrackListModel:NSObject, UITableViewDataSource {
     // MARK: - Private methods
     private func parseResults() {
         if (nil != trackResultsDict) {
-            let result = trackResultsDict!["results"] as! [Any?]
+            let result = self.trackResultsDict!["results"] as! [Any?]
             // create TrackItem object array
+            trackItems = []
             for item in result {
                 let trackItem = TrackItem(details: item as! [String:Any?])
                 
@@ -51,6 +57,7 @@ public class TrackListModel:NSObject, UITableViewDataSource {
             // Default search items based on requirements
             queryServer(withTerm: "star", country: "au", media: "movie")
         }
+        
     }
     
     /**
@@ -76,6 +83,11 @@ public class TrackListModel:NSObject, UITableViewDataSource {
                 // persist in file
                 self.commit()
                 self.parseResults()
+                
+                // Should call this on main thread for UI 
+                DispatchQueue.main.async {
+                    self.delegate?.onData()
+                }
             }
             
         }

@@ -51,7 +51,7 @@ public class TrackDetailViewController:UIViewController {
         self.artistNameLabel.text = trackItem.artistName ?? ""
         self.genre.text = trackItem.genre ?? "Unknown"
         self.priceLabel.text = "\((trackItem.currency)!) \((trackItem.trackPrice)!)"
-        self.descriptionLabel.text = trackItem.description
+        self.descriptionLabel.text = (trackItem.description.isEmpty == false) ? trackItem.description : "No Description"
         do {
             self.trackImageView.image = UIImage(data: try Data(contentsOf: trackItem.artworkUrl100!))
         }

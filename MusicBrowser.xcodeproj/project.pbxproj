@@ -22,6 +22,7 @@
 		F3D92128223B23EB00CC4FD8 /* TempFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D92127223B23EB00CC4FD8 /* TempFileManager.swift */; };
 		F3D9212B223BAA0900CC4FD8 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9212A223BAA0900CC4FD8 /* TrackCell.swift */; };
 		F3D9212D223BB4B700CC4FD8 /* TrackDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9212C223BB4B700CC4FD8 /* TrackDetailViewController.swift */; };
+		F3D9212F223E1FD400CC4FD8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F3D9212E223E1FD400CC4FD8 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		F3D92127223B23EB00CC4FD8 /* TempFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempFileManager.swift; sourceTree = "<group>"; };
 		F3D9212A223BAA0900CC4FD8 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		F3D9212C223BB4B700CC4FD8 /* TrackDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailViewController.swift; sourceTree = "<group>"; };
+		F3D9212E223E1FD400CC4FD8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		F341E225223AAF3600E05C88 = {
 			isa = PBXGroup;
 			children = (
+				F3D9212E223E1FD400CC4FD8 /* README.md */,
 				F341E230223AAF3600E05C88 /* MusicBrowser */,
 				F341E245223AAF3800E05C88 /* MusicBrowserTests */,
 				F341E250223AAF3800E05C88 /* MusicBrowserUITests */,
@@ -295,6 +298,7 @@
 			files = (
 				F341E23C223AAF3800E05C88 /* LaunchScreen.storyboard in Resources */,
 				F341E239223AAF3800E05C88 /* Assets.xcassets in Resources */,
+				F3D9212F223E1FD400CC4FD8 /* README.md in Resources */,
 				F341E237223AAF3600E05C88 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
