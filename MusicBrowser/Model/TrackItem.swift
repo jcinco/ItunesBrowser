@@ -89,12 +89,16 @@ public class TrackItem {
     
     
     // MARK: - Constructor
+    /**
+     Constructor
+     
+     - Parameters:
+     - details [String:Any?]? - the track detailed information search response.
+     */
     public init(details:[String:Any?]?) {
+        // We keep the specific track item's JSON data as a dictionary.
+        // This will come in handy when we want to persist its data in a PLIST file.
         self._innerDictionary = details ?? [:]
-    }
-    
-    public func fetchAndSaveArtwork() {
-        
     }
     
     
